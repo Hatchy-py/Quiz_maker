@@ -1,6 +1,6 @@
 # Quiz Maker
 
-This is a simple Python class that allows you to create and run quizzes. It provides methods for adding questions, options, and answers, and allows users to participate in the quiz by answering the questions and providing feedback on their performance.
+This is a simple Python class that allows you to create and run quizzes. It provides methods for adding questions, options, answers, and ponderations. Users can participate in the quiz by answering the questions, and their score will be calculated based on the ponderations assigned to each question.
 
 ## Installation
 
@@ -22,19 +22,19 @@ from quiz import Quiz
 my_quiz = Quiz("My Quiz")
 ```
 
-3. Add questions to your quiz using the `add_question` method. Each question should include the question itself, a list of options, and the index of the correct answer.
+3. Add questions to your quiz using the `add_question` method. Each question should include the question itself, a list of options, the index of the correct answer, and an optional ponderation (default is 1).
 
 ```python
-my_quiz.add_question("What is the capital of France?", ["Paris", "London", "Berlin"], 1)
+my_quiz.add_question("What is the capital of France?", ["Paris", "London", "Berlin"], 1, 2)
 ```
 
-4. Run the quiz using the `run_quiz` method. This will display each question, prompt the user for their answer, and provide feedback on their performance.
+4. Run the quiz using the `run_quiz` method. This will display each question, prompt the user for their answer, and provide feedback on their performance. The user's score will be calculated based on the ponderations assigned to each question.
 
 ```python
 my_quiz.run_quiz()
 ```
 
-5. After the quiz is completed, the user's score and the total number of questions will be displayed.
+5. After the quiz is completed, the user's score and the total score based on ponderations will be displayed.
 
 ## Example
 
@@ -46,9 +46,9 @@ from quiz import Quiz
 # Create a quiz
 my_quiz = Quiz("Geography Quiz")
 
-# Add questions
-my_quiz.add_question("What is the capital of France?", ["Paris", "London", "Berlin"], 1)
-my_quiz.add_question("What is the largest continent?", ["Africa", "Asia", "Europe"], 2)
+# Add questions with ponderations
+my_quiz.add_question("What is the capital of France?", ["Paris", "London", "Berlin"], 1, 2)
+my_quiz.add_question("What is the largest continent?", ["Africa", "Asia", "Europe"], 2, 3)
 
 # Run the quiz
 my_quiz.run_quiz()
