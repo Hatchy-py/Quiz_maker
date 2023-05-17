@@ -2,18 +2,20 @@ class Quiz:
     def __init__(self, name):
         self.name = name
         self.questions = []
+        self.ponderations = []
 
-    def add_question(self, question, options, answer):
-        self.questions.append((question, options, answer))
+    def add_question(self, question, options, answer, ponderation = 1):
+        self.questions.append((question, options, answer, ponderation))
+        self.ponderations.append(ponderation)
 
     def run_quiz(self):
         score = 0
-        total_questions = len(self.questions)
+        total_questions = sum(self.ponderations)
 
         print(f"Welcome to the {self.name} Quiz!")
         print("-----------------------------")
 
-        for i, (question, options, answer) in enumerate(self.questions):
+        for i, (question, options, answer, ponderation) in enumerate(self.questions):
             print(f"Question {i+1}: {question}")
 
             for j, option in enumerate(options):
@@ -22,7 +24,7 @@ class Quiz:
             user_answer = input("Enter your answer (number): ")
             if user_answer == str(answer):
                 print("Correct!")
-                score += 1
+                score += ponderation
             else:
                 print(f"Wrong! The correct answer is {answer}.")
 
