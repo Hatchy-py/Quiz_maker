@@ -33,3 +33,4 @@ class Quiz:
         print("Quiz Completed!")
         print("-----------------------------")
         print(f"Your score: {score}/{total_questions}")
+        print("Your Grade: ", score/total_questions*100, "%")
