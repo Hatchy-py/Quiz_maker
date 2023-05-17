@@ -1,4 +1,3 @@
-Sure! Here's a sample README 
 # Quiz Maker
 
 This is a simple Python class that allows you to create and run quizzes. It provides methods for adding questions, options, and answers, and allows users to participate in the quiz by answering the questions and providing feedback on their performance.
