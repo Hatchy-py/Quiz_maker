@@ -36,6 +36,10 @@ my_quiz.run_quiz()
 
 5. After the quiz is completed, the user's score and the total score based on ponderations will be displayed.
 
+## About the Programmer
+
+This program was developed by Hatchy. Hatchy has been coding in Python since 2021 and this quiz maker is his first repository. For more information about Hatchy, you can visit their [GitHub profile](https://github.com/Hatchy-py).
+
 ## Example
 
 Here's an example usage of the quiz maker:
